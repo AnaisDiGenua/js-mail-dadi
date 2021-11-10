@@ -6,6 +6,28 @@
 
 
 
-// generare un numero random
-let numeroRandom = Math.floor(Math.random() * 6) + 1;
-console.log(numeroRandom);
+// generaro un numero random
+let utenteScore = Math.floor(Math.random() * 6) + 1;
+let computerScore = Math.floor(Math.random() * 6) + 1;
+
+
+
+// generaro evento con button
+document.getElementById('btn').addEventListener("click", 
+
+    function() {
+    document.querySelector('.numero-utente').innerHTML += utenteScore
+    document.querySelector('.numero-computer').innerHTML += computerScore
+    
+});
+
+
+// stabilisco il vincitore
+if (utenteScore > computerScore) {
+    console.log('hai vinto!');
+} else if (utenteScore == computerScore) {
+    console.log('pareggio');
+} else {
+    console.log('hai perso');
+}
+
