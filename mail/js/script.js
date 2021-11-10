@@ -14,12 +14,34 @@
 
 
 
-// ********EERCIZIO MAIL********
+// ********ESERCIZIO MAIL********
 
-// input- creo array email
+// input- creo array email e sentinella
 const listaEmail = ["mario.rossi@gmail.com", "luigi.verdi@gmail.com", "anais.digenua@gmail.com"];
-console.log(listaEmail);
+
+let sentinella = false;
+
+
 
 // operazioni - chiedo all'utente la sua email
 let userEmail = prompt('inserisci la tua email per accedere');
-console.log(userEmail);
+document.getElementById('user-email').innerHTML = userEmail
+
+
+// operazioni - cerco email nell'array con il ciclo for
+for (i = 0; i < listaEmail.length && sentinella == false; i++) {
+    if (userEmail == listaEmail[i]) {
+        sentinella = true;
+    } else {
+        sentinella = false;
+    }
+}
+
+
+
+// output stampa del messaggio
+if (sentinella == true) {
+    document.getElementById('user-access').innerHTML = 'consentito'
+} else {
+    document.getElementById('user-access').innerHTML = 'negato'
+}
