@@ -9,3 +9,17 @@
 // si ma noi cosa vogliamo fare?
 // torniamo a scrivere in italiano
 // proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
+
+
+
+
+
+// ********EERCIZIO MAIL********
+
+// input- creo array email
+const listaEmail = ["mario.rossi@gmail.com", "luigi.verdi@gmail.com", "anais.digenua@gmail.com"];
+console.log(listaEmail);
+
+// operazioni - chiedo all'utente la sua email
+let userEmail = prompt('inserisci la tua email per accedere');
+console.log(userEmail);
